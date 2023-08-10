@@ -1,0 +1,286 @@
+UNIX/LINUX ===>
+---------------
+Java developer 
+Python 
+Devops ==> Linux 
+Hadoop ==> Linux 
+Tester ==> Linux 
+Developer ==> Linux 
+PL/SQL, Oracle DBA ==> Linux 
+90% of real time application ==> Linux platform
+
+What is UNIX ?
+--------------
+It is an operating system created in 1960s. 
+With lot of extension and improvement to base version, several flavors introduced by organization/companies (RedHat Linux, Ubuntu, Suse, PopOs!….) 
+
+Chracteristics of UNIX ===>
+---------------------------
+1. It is Freeware 
+2. It is Open source software 
+3. It is FOSS ( Freeware and Open source software) 
+4. It is multi user operating system 
+5. It is multi tasking operating system 
+6. It is user friendly and supports both cui based and gui based 
+    CUI ->  Character User Interface 
+    GUI -> Graphical User Interface  
+
+Dir1 Dir2 Dir3 Dir4 ….................... Dir50              
+In the directory we wanna create 100 files in every dir 
+File1 File2 File3 File4 ….. File100 
+
+CMD : mkdir dir{1..50}
+touch dir{1..50}/file{1..100}
+
+7. It is more secure than windows operating system
+
+
+Flavours of UNIX :
+------------------
+As UNIX is open source operating system, multiple flavours are available with lot of extension and improvements.
+
+Ubuntu
+RedHat Linux
+CentOS
+Fedora
+Slackware
+Open Solaries
+Kali
+Suse Linux Enterprise Server(SLES)
+Open Suse
+PopOs!
+
+(distrowatch.com)
+
+Components of UNIX:
+-------------------
+2 inportant Components :
+                    * Shell
+                    * Kernel
+
+1. Shell :
+----------
+. It is a outer layer of UNIX operating system.
+. Shell reads command provided by user.
+. Shell will check is it valid command or not.
+. Shell will check it is properly userd or not.
+. If everything is proper, then shell interprets/converts that command into kernel understandable form and handover that to the kernel. 
+. Shell acts as interface between user and kernel.
+
+2. Kernel :
+-----------
+. It is the core component of unix operating system.
+. It is responsible to execute our command with the help of hardware components.
+. Memory allocation and processor allocation will takes care by kernel.
+. It acts as interface between shell and hardware components.
+
+Two type of user are there in  linux => 
+---------------------------------------
+normal user ===> $prompt
+super user/root user /admin user ===> #prompt
+
+sudo -i ===> To switch to superuser
+
+Online UNIX Terminal:
+---------------------
+http://www.masswerk.at/jsuix
+
+
+The most commonly used basic commands:
+--------------------------------------
+
+1. pwd --> print working directory
+2. ls --> list out all files and directory
+3. mkdir --> to create/make a directory
+4. cd --> change directory
+5. touch --> to create a empty file
+6. rmdir --> to remove a directory
+7. rm --> to remove a file
+8. cal --> display current month calandar
+9. date --> display current date and time
+10. help --> to display list of available command
+11. clear --> to clear Terminal
+12. exit --> to logout session
+13. hello --> to display brief system information
+14. cd.. --> go to previous
+
+user home directory for bhavya: /home/bhavya
+user home directory for other: /home/other
+user home directory for guest: /home/guest
+
+
+
+Topic-2: Linux File System:
+---------------------------
+
+Types of file in linux:
+-----------------------
+
+* In Linux everything is treated as as a file
+
+All Files are Divided into Three Types :-
+-----------------------------------------
+1. Normal Files or Ordinary Files
+2. Directory Files
+3. Device Files
+
+1. Normal Files or Ordinary Files:
+----------------------------------
+These files contain data. It can be normal text file or binary files(images, video, files, audio files etc)
+
+ex. 
+abc.txt
+test.sh===>Script File
+test.py===>Python File
+Test.java===>Java File
+sunny.jpg
+bahubali.mp4
+
+{* 
+touch sunny.jpg
+gedit sunny.jpg
+cat sunny.jpg
+file sunny.jpg
+*}
+
+* In Linux file extension is not important. based on our content the linux can identify file type.
+
+2. Directory Files:
+-------------------
+These files represents directories.
+In windows, we can use folder terminology but in linux we can use directory terminology.
+directory contains files and sub directories also.
+
+3. Device Files:
+----------------
+In Linux every device is represented as a file.
+By using this file we can communicate with that device.
+Inside /dev directory all device related file will be there
+
+
+terminal 1 ===> /dev/pts/0
+terminal 2 ===> /dev/pts/1
+
+{* 
+tty -> terminal directory
+echo "I Love Bhavya" > /dev/pts/1  --> send cmd to second terminal
+clear > /dev/pts/1
+*}
+
+Note:
+crtl+alt+t ===> To open terminal
+crtl+d ===> To close the terminal
+
+
+How to check file type:
+-----------------------
+
+In Ubuntu:
+blue color files represents: directories
+remaining: ordinary file
+
+we have to use ls commnad with -l option
+
+* The first chracter represents the type of the file
+d ---> directory file
+- ===> ordinary file
+l ---> link file
+
+c ---> Chracter special file
+b ---> block special File
+s ---> Socket file
+
+
+File System Navigation Commands :
+---------------------------------
+
+hidden files and hidden directories
+
+$ ls
+$ ls -a(-a mean all)
+
+. ====> represents current directory
+.. ===> represents parents directory
+
+/home/bhavya/Desktop/dir1/dir2
+if you are in dir2
+current directory: dir2
+parent directory: dir1
+   
+cd command
+
+1. $ cd .
+        changes to current directory (useless)
+
+2. $ cd..
+        changes to parent directory
+
+3. $ cd ../../..
+
+4. $ cd ~
+        to go to user home directory
+        /home/bhavya
+
+5. $ cd
+      cd command without any argument
+      to go to user home directory
+        /home/bhavya
+
+6. $ cd -
+        If we want to go previous working directory
+
+
+Linux File System Hierarchy :
+-----------------------------
+
+Linux file system has TREE like structure.
+It starts with root(/)
+/ is the topmost directory
+sub directories:
+bin   etc   home   lib   dev   use   cdrom 
+
+1. bin directory:
+-----------------
+bin mean binary
+It contains all binary executables related to our linux command.
+
+touch
+ls
+mkdir
+cd
+
+
+$ which cmdname
+            check the related file
+
+2. sbin directory:
+------------------
+sbin means systembin
+normal user used command related binary executeable file available in bin directory.
+
+super user used command related binary executeable file available in sbin directory.
+
+Disk partitioning 
+Network management
+
+Q. what is the difference between bin and sbin?
+bin contains binary executables related to command used by the super user.
+sbin contains binary executeables related to commands used by super user. 
+
+3. etc directory:
+-----------------
+This directory conatins all system configuration files.
+These configuration files can be used by operating system itself.
+
+/etc/passwd ===> All user information
+/etc/group ===> All groups information
+/etc/hosts ===> All hosts information (ip address and dns names)
+
+
+supppose im in dir2 ... from there if i write cd home what will happen ?
+$ cd home (not work)
+$ cd /home
+
+
+4. tmp directory:
+-----------------
